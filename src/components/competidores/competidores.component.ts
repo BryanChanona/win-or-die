@@ -14,8 +14,8 @@ import { DialogoGanadorComponent } from '../dialogo-ganador.component/dialogo-ga
 })
 export class CompetidoresComponent {
 
-  grupo1: string[] = ["Hannia", "Abarca", "Melissa", "Sujey", "Bryan", "Milton", "Fabricio", "Ameth", "Manuel de Jesús", "Héctor", "Gael", "Lyz", "Luis", "Sayuri"];
-  grupo2: string[] = ["Jose", "Christopher", "Angel", "Maximiliano", "Eduardo", "Fredy", "Yara", "Bruno", "Joaquin", "Antonio", "Osvaldo", "Marcos", "Ulises"];
+  grupo1: string[] = ["Hannia", "Abarca", "Melissa", "Sujey", "Bryan", "Fabricio", "Ameth", "Héctor", "Gael", "Lyz", "Luis"];
+  grupo2: string[] = ["Jose", "Christopher", "Angel", "Maximiliano", "Fredy", "Bruno", "Joaquin", "Antonio", "Marcos", "Ulises"];
 
   eliminados: string [] = [];  // Cambié a { estudiante: string } para mayor claridad
   estudiante1: string = '';
@@ -36,40 +36,12 @@ export class CompetidoresComponent {
 
     this.estudiante1 = this.grupo1[this.posicionRandomUno];
     this.estudiante2 = this.grupo2[this.posicionRandomDos];
-
+    this.grupo1.splice(this.posicionRandomUno,1);
+    this.grupo2.splice(this.posicionRandomDos,1);
+    this.eliminados.push(this.estudiante1);
+    this.eliminados.push(this.estudiante2);
     console.log(`Estudiantes seleccionados: ${this.estudiante1} y ${this.estudiante2}`);
   }
 
-  eliminarCompetidor() {
-    if (!this.estudiante1 || !this.estudiante2) {
-      console.log("No hay competidores seleccionados para eliminar.");
-      return;
-    }
-
-    const elegirCompetidor = Math.floor(Math.random() * 2) + 1;
-    let competidorEliminado = '';
-
-    if (elegirCompetidor === 1) {
-      competidorEliminado = this.estudiante1;
-      this.grupo1.splice(this.posicionRandomUno, 1);
-      this.eliminados.push(competidorEliminado ); // Agregar al arreglo eliminados
-      this.estudiante1 = '';
-    } else {
-      competidorEliminado = this.estudiante2;
-      this.grupo2.splice(this.posicionRandomDos, 1);
-      this.eliminados.push( competidorEliminado ); // Agregar al arreglo eliminados
-      this.estudiante2 = '';
-    }
-
-    // Abrir el diálogo para mostrar el competidor eliminado
-    this.dialog.open(DialogoCompetidorEliminadoComponent, {
-      data: { competidor: competidorEliminado }
-    });
-
-    if (this.grupo1.length === 0 || this.grupo2.length === 0) {
-      const equipoGanador = this.grupo1.length > 0 ? 'Grupo 1' : 'Grupo 2'; // Determinar el equipo ganador
-      this.dialog.open(DialogoGanadorComponent, {
-        data: { equipo: equipoGanador }
-      });
-  }
-}}
+ 
+}
