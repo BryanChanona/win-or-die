@@ -17,7 +17,7 @@ export class CompetidoresComponent {
   grupo1: string[] = ["Hannia", "Abarca", "Melissa", "Sujey", "Bryan", "Fabricio", "Ameth", "Héctor", "Gael", "Lyz", "Luis"];
   grupo2: string[] = ["Jose", "Christopher", "Angel", "Maximiliano", "Fredy", "Bruno", "Joaquin", "Antonio", "Marcos", "Ulises"];
 
-  eliminados: string [] = [];  // Cambié a { estudiante: string } para mayor claridad
+  eliminados: string [] = []; 
   estudiante1: string = '';
   estudiante2: string = '';
   posicionRandomUno: number = 0;
