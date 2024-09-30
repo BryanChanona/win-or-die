@@ -1,0 +1,56 @@
+<div class="cardsContent">
+  <mat-card appearance="outlined" class="card">
+    <mat-card-title class="tittle">Competidores</mat-card-title>
+    <mat-card-content class="arreglo">
+      <div class="table-container">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Grupo 1</th>
+              <th>Grupo 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let estudiante1 of grupo1; let i = index">
+              <td>{{ estudiante1 }}</td>
+              <td *ngIf="grupo2[i]">{{ grupo2[i] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="buttonContent">
+  <button mat-button class="button" (click)="seleccionarEstudiantes()">Seleccionar competidores</button>
+  <button mat-button class="button" (click)="eliminarCompetidor()">Eliminar</button>
+</div>
+<div class="competidores">
+  <div class="celdaCompetidor">
+    <h3>{{ estudiante1 }}</h3>
+  </div>
+  <div class="celdaCompetidor">
+    <h3>{{ estudiante2 }}</h3>
+  </div>
+</div>
+
+<div class="historialContent">
+  <div class="historial">
+    <h1>Jugadores que ya participaron:</h1>
+    <div class="table-container">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Eliminados:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let studentsHisto of eliminados">
+            <td>{{ studentsHisto }}</td> <!-- Asegúrate de usar la propiedad correcta -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

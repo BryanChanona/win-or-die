@@ -1,0 +1,52 @@
+.footer {
+  background-color: #222;  /* Fondo oscuro para estilo de juego */
+  color: #ffffff;  /* Texto blanco para contraste */
+  padding: 20px 0;
+  text-align: center;
+  border-top: 5px solid #009879;  /* Línea superior verde para destacar */
+  font-family: 'Arial', sans-serif;
+  margin-top: 40px;  /* Espacio superior */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #cccccc;
+}
+
+.social-links {
+  margin: 20px 0;
+}
+
+.social-icon {
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-icon:hover {
+  color: #009879;  /* Efecto hover con color verde */
+}
+
+.copyright {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.credits {
+  font-size: 12px;
+  color: #cccccc;
+}

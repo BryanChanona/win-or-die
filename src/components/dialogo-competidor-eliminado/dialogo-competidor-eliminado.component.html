@@ -1,0 +1,13 @@
+
+<div class="mat-dialog-container" >
+    <h1 mat-dialog-title class="dialog-title">Competidor Eliminado</h1>
+
+<div mat-dialog-content class="dialog-content">
+  <p>El jugador <strong>{{ data.competidor }}</strong> ha sido eliminado.</p>
+</div>
+
+<div mat-dialog-actions class="dialog-actions">
+  <!-- Agrega (click)="cerrarDialogo()" para que cierre al hacer clic -->
+  <button mat-button class="dialog-close-button" (click)="cerrarDialogo()">Aceptar</button>
+</div>
+</div>

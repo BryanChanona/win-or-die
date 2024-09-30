@@ -1,0 +1,54 @@
+
+  /* Estilo del título del diálogo */
+  
+  .mat-dialog-container {
+    background-color: #f8f9fa; /* Fondo claro */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 30px; /* Más espaciado interno */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 600px; /* Ancho más grande */
+    max-width: 80vw; /* Limitar el ancho máximo al 80% del viewport */
+    height: auto; /* Altura ajustable */
+    max-height: 90vh; /* Limitar la altura máxima al 90% del viewport */
+    overflow-y: auto; /* Añadir scroll si el contenido supera la altura máxima */
+  }
+  .dialog-title {
+    font-size: 28px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Negrita */
+    color: #343a40; /* Color oscuro */
+    text-align: center; /* Centramos el texto */
+    margin-bottom: 15px; /* Más espacio debajo del título */
+  }
+  
+  /* Estilo del contenido del diálogo */
+  .mat-dialog-content {
+    font-size: 20px; /* Tamaño de fuente más grande */
+    color: #495057; /* Color gris oscuro */
+    line-height: 1.5; /* Espaciado entre líneas */
+    text-align: center; /* Centramos el texto */
+    margin-bottom: 25px; /* Más espacio debajo del contenido */
+  }
+  
+  /* Estilo para la acción (botón de cierre) */
+  .mat-dialog-actions {
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: center; /* Centrar el botón */
+    padding-top: 10px; /* Espacio adicional entre el contenido y el botón */
+  }
+  
+  .dialog-close-button {
+    background-color: #009879; /* Color de fondo azul */
+    color: white; /* Texto blanco */
+    font-size: 14px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Negrita */
+    border-radius: 10px; /* Bordes más redondeados */
+    padding: 12px 25px; /* Más espaciado interno */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .dialog-close-button :hover {
+    background-color: #0056b3; /* Color más oscuro al hacer hover */
+  }
+  
